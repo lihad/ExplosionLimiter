@@ -1,3 +1,7 @@
 name: ExplosionLimiter
 main: Lihad.ExplosionLimiter.ExplosionLimiter
 version: 1.0
+commands:
+  el:
+    description: Invalid Command
+    usage: Invalid Command
