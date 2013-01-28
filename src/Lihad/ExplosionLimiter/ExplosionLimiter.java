@@ -126,8 +126,8 @@ public class ExplosionLimiter extends JavaPlugin implements Listener {
 	@EventHandler
 	public void onEntityExplode(EntityExplodeEvent event){
 		for(int i = 0; i<event.blockList().size(); i++){
-			if(whitelistOn && whitelist.contains(event.blockList().get(i).getTypeId()) ||
-					event.blockList().get(i).getLocation().getBlockY() > level){
+			if((whitelistOn && whitelist.contains(event.blockList().get(i).getTypeId())) ||
+					(level != null && event.blockList().get(i).getLocation().getBlockY() > level)){
 				event.setCancelled(true);
 			}
 		}	
